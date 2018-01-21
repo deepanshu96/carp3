@@ -95,37 +95,12 @@ I used the training data provided by the udacity in the data.zip file. Since the
 
 I also used the left and right camera images in with a steering angle correction of 0.1 in order to navigate through more steep turns on the track one in the udacity simulator. 
 
+Finally I randomly shuffled the data set and put 20% of the data into a validation set. 
+
 After that I normalized the images using lambda function in keras and cropped the images so the only the track images were feeded to the model. This helped remove unnecessary information likes trees, mountains etc. which could have resulted in generation wrong results. 
 
 The images were preprocessed in batches using the generator function and were used by model using the fit_generator function in keras. 
 
+The images from the car camera are shown below:-
 
-
-
-
-
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
-
-![alt text][image2]
-
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
-
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs used were 5. I used an adam optimizer so that manually training the learning rate wasn't necessary.

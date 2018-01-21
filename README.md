@@ -1,4 +1,4 @@
-**Behavioral Cloning Project**
+# *Behavioral Cloning Project*
 
 My project includes the following files:
 * [model.py](https://github.com/deepanshu96/carp3/blob/master/model.py) containing the script to create and train the model.

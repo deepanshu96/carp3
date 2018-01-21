@@ -27,6 +27,7 @@ The goals of this project are the following:
 
 My project includes the following files:
 * [model.py](https://github.com/deepanshu96/carp3/blob/master/model.py) containing the script to create and train the model.
+* [model.ipynb](https://github.com/deepanshu96/carp3/blob/master/model.ipynb) the jupyter notebook of the model which I used.
 * [drive.py](https://github.com/deepanshu96/carp3/blob/master/drive.py) for driving the car in autonomous mode.
 * [model.h5](https://github.com/deepanshu96/carp3/blob/master/model.h5) containing a trained convolution neural network. 
 * [writeup_report.md](https://github.com/deepanshu96/carp3/blob/master/writeup_template.md) summarizing the results.
@@ -41,7 +42,8 @@ python drive.py model.h5
 
 #### 3. Submission code is usable and readable
 
-The [model.py file](https://github.com/deepanshu96/carp3/blob/master/model.py) contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
+The [model.py file](https://github.com/deepanshu96/carp3/blob/master/model.py) contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model.
+Apart from it I have also included the pre trained jupyter notebook which is [model.ipynb](https://github.com/deepanshu96/carp3/blob/master/model.ipynb). 
 
 ### Model Architecture and Training Strategy
 

@@ -65,25 +65,19 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
-
-For details about how I created the training data, see the next section. 
+I used the training data provided by udacity in the file data.zip. I applied various transformation in order to create new or more data. For details about how I created the training data, see the next section. 
 
 ### Model Architecture and Training Strategy
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+The overall strategy for deriving a model architecture was to improve the overall behaviour of the autonomous driving of the car so that it remains on the road and does not fall over the edges.
 
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
+My first step was to use a convolution neural network model similar to the model that was used by the nvidia self driving car team. I thought this model might be appropriate because it gave low validation and training errors and was pretested on actual self driving car by the nvidia team. I also tried to use le net model architecture but it did not give accurate results as the car was unable to complete the track and fell over the edges.
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
+At first I used dropout layers in order to reduce the overfitting but due to it the model was not training well and hence I decided to remove any dropout layers which reduced the validation errors. I also used less number of epochs so that the model does not overfit. At last I used adam optimizer which helps the model to learn the parameters efficiently. 
 
-To combat the overfitting, I modified the model so that ...
-
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
+The final step was to run the simulator to see how well the car was driving around track one. In the initial attempts the car was going away from road but after many refinements and image processing(discussed below), the car was able to drive till the first turn after the bridge. After that I decided to use the left and right camera images also with a steering angle correction. 
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
@@ -96,6 +90,19 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 ![alt text][image1]
 
 #### 3. Creation of the Training Set & Training Process
+
+I used the training data provided by the udacity in the data.zip file. Since the data had limited amount of images I added or created addtional images by flipping each image in the dataset. 
+
+I also used the left and right camera images in with a steering angle correction of 0.1 in order to navigate through more steep turns on the track one in the udacity simulator. 
+
+After that I normalized the images using lambda function in keras and cropped the images so the only the track images were feeded to the model. This helped remove unnecessary information likes trees, mountains etc. which could have resulted in generation wrong results. 
+
+The images were preprocessed in batches using the generator function and were used by model using the fit_generator function in keras. 
+
+
+
+
+
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 

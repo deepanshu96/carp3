@@ -119,4 +119,18 @@ The images were preprocessed in batches using the generator function and were us
 
 The images from the car camera are shown below:-
 
+
+### Center
+
+![alt text](https://github.com/deepanshu96/carp3/blob/master/one.png)
+
+### Left
+
+![alt text](https://github.com/deepanshu96/carp3/blob/master/two.png)
+
+### Right
+
+![alt text](https://github.com/deepanshu96/carp3/blob/master/three.png)
+
+
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs used were 5. I used an adam optimizer so that manually training the learning rate wasn't necessary.

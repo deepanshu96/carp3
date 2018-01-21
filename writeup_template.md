@@ -61,7 +61,7 @@ I also used generators in order to reduce the space or memory needed, this helpe
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually.
 
 #### 4. Appropriate training data
 

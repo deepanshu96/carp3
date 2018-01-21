@@ -53,9 +53,11 @@ My model is based on the model that nvidia self driving car team used. Here is t
 
 #### 2. Attempts to reduce overfitting in the model
 
-I did not use maxpooling or dropout layers 
+I did not use maxpooling or dropout layers since the number of epochs I used were less, this also helped in reducing the overall and validation error.
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.The validation set was derived by splitting the given data into training and validation data. 
+
+I also used generators in order to reduce the space or memory needed, this helped in removing the memory out of bounds exception which was encountered prior to it. 
 
 #### 3. Model parameter tuning
 
